@@ -1,15 +1,1 @@
-To run the application:
-
-1. Simply type node index.js in terminal
-2. Type localhost:3000 in web browser to run the web application
-
-
-
-
-ONLY IF any errors when running if not above workflow would suffice:
-
-If you experience any issues when executing the SQL scripts, especially when trying to use the LOAD DATA LOCAL INFILE command to load data:
-
-By executing the following command in your MySQL session, you can enable the local_infile option and fix this problem:
-
-'SET GLOBAL local_infile = 1;'
+This project explores what puts young adults in India at risk of heart attacks using a dataset from Kaggle that covers their lifestyle, medical background, and daily habits. I built a relational database to organize the data into meaningful categories like lifestyle, medical history, and region, then ran SQL queries to uncover patterns. The analysis looked at how factors like physical activity, BMI, smoking, sleep, and family history influence heart health. To make the insights easier to understand, I created a simple web app using Node.js and MySQL that displays the results clearly. The findings show that regular exercise helps lower risk, men with lower socioeconomic status tend to be more vulnerable, and smoking combined with poor sleep increases the likelihood of heart problems. Overall, this project shows how data and thoughtful analysis can help highlight health risks and guide prevention efforts.
