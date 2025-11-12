@@ -1,0 +1,74 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #FFF5F5; 
+    color: #333;
+}
+
+h1 {
+    background-color: #ff8d8d; /* Main header background */
+    color: white;
+    padding: 20px;
+    text-align: center;
+    margin: 0;
+}
+
+h2 {
+    color: #FF7575; /* Sub-header color */
+    margin-top: 20px;
+    text-align: center;
+}
+
+/* Table Styles */
+table {
+    width: 90%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+thead {
+    background-color: #FF7575; /* Table header background */
+    color: white;
+}
+
+th, td {
+    padding: 10px 15px;
+    text-align: center;
+    border: 1px solid #ddd;
+}
+
+tr:nth-child(even) {
+    background-color: #fff8f8; /* Alternate row background */
+}
+
+tr:hover {
+    background-color: #FFECEC; /* Row hover effect */
+}
+
+/* Button Styles (Optional) */
+button {
+    padding: 10px 15px;
+    margin: 10px;
+    background-color: #ffe7e7; /* Button background */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #fff8f8; /* Button hover */
+}
+
+/* Footer Styles */
+footer {
+    margin-top: 20px;
+    text-align: center;
+    padding: 10px 0;
+    background-color: #FF7575; /* Footer background */
+    color: white;
+}

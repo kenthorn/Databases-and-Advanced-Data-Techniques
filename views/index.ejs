@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="/main.css" />
+    <title>Heart attack in youth of India</title>
+</head>
+
+<body>
+    <h1>Heart Attack in Youths of India</h1>
+
+    <!-- Regional Disparities Table -->
+    <h2>Regional Disparities in Heart Attack Likelihood</h2>
+    <p>
+        This table highlights the regional differences in heart attack risks among young adults. The data shows
+        the number of individuals at risk, total population surveyed, and the risk percentage for each region.
+        Understanding these disparities can help focus preventive measures where they are most needed.
+    </p>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Region</th>
+                <th>At Risk (Count)</th>
+                <th>Total (Count)</th>
+                <th>Risk Percentage</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% regionalDisparities.forEach(row=> { %>
+                <tr>
+                    <td>
+                        <%= row.Region %>
+                    </td>
+                    <td>
+                        <%= row.RiskCount %>
+                    </td>
+                    <td>
+                        <%= row.TotalCount %>
+                    </td>
+                    <td>
+                        <%= row.RiskPercentage.toFixed(2) %>%
+                    </td>
+                </tr>
+                <% }); %>
+        </tbody>
+    </table>
+
+    <!-- Physical Activity and BMI Table -->
+    <h2>Impact of Physical Activity on High BMI Risks</h2>
+    <p>
+        This table examines how different levels of physical activity influence heart attack risks in individuals with
+        high BMI.
+        It provides insights into the preventive role of exercise and highlights the risk percentages for sedentary,
+        moderately active, and highly active individuals.
+    </p>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Physical Activity Level</th>
+                <th>High BMI At Risk (Count)</th>
+                <th>Total High BMI (Count)</th>
+                <th>Risk Percentage</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% physicalActivity.forEach(row=> { %>
+                <tr>
+                    <td>
+                        <%= row.Physical_Activity_Level %>
+                    </td>
+                    <td>
+                        <%= row.HighRiskCount %>
+                    </td>
+                    <td>
+                        <%= row.TotalHighBMI %>
+                    </td>
+                    <td>
+                        <%= row.RiskPercentage.toFixed(2) %>%
+                    </td>
+                </tr>
+                <% }); %>
+        </tbody>
+    </table>
+
+    <!-- Gender and SES Table -->
+    <h2>Heart Attack Likelihood by Gender and SES</h2>
+    <p>
+        This table analyzes the relationship between gender, socioeconomic status (SES), and heart attack risks.
+        It reveals the at-risk counts, total population, and risk percentages for each combination of gender and SES.
+    </p>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Gender</th>
+                <th>SES</th>
+                <th>At Risk (Count)</th>
+                <th>Total (Count)</th>
+                <th>Risk Percentage</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% genderAndSES.forEach(row=> { %>
+                <tr>
+                    <td>
+                        <%= row.Gender %>
+                    </td>
+                    <td>
+                        <%= row.SES %>
+                    </td>
+                    <td>
+                        <%= row.RiskCount %>
+                    </td>
+                    <td>
+                        <%= row.TotalCount %>
+                    </td>
+                    <td>
+                        <%= row.RiskPercentage.toFixed(2) %>%
+                    </td>
+                </tr>
+                <% }); %>
+        </tbody>
+    </table>
+
+    <!-- Smoking and Sleep Table -->
+    <h2>Correlation Between Smoking, Sleep Duration, and Risks</h2>
+    <p>
+        This table explores how smoking habits and sleep duration affect heart attack risks.
+        It highlights the number of at-risk individuals, total surveyed population, and risk percentages for various
+        smoking statuses and sleep durations.
+    </p>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Smoking Status</th>
+                <th>Sleep Duration</th>
+                <th>At Risk (Count)</th>
+                <th>Total (Count)</th>
+                <th>Risk Percentage</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% smokingAndSleep.forEach(row=> { %>
+                <tr>
+                    <td>
+                        <%= row.Smoking_Status %>
+                    </td>
+                    <td>
+                        <%= row.Sleep_Duration %>
+                    </td>
+                    <td>
+                        <%= row.RiskCount %>
+                    </td>
+                    <td>
+                        <%= row.TotalCount %>
+                    </td>
+                    <td>
+                        <%= row.RiskPercentage.toFixed(2) %>%
+                    </td>
+                </tr>
+                <% }); %>
+        </tbody>
+    </table>
+
+    <!-- Family History and Clinical Metrics Table -->
+    <h2>Family History and Clinical Metrics</h2>
+    <p>
+        This table investigates the relationship between a family history of heart disease and clinical metrics such as
+        average cholesterol levels and average blood pressure.
+        The data can help identify early warning signs in individuals with hereditary risk factors.
+    </p>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Family History</th>
+                <th>Average Cholesterol</th>
+                <th>Average Blood Pressure</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% familyHistory.forEach(row=> { %>
+                <tr>
+                    <td>
+                        <%= row.Family_History_Heart_Disease %>
+                    </td>
+                    <td>
+                        <%= row.AvgCholesterol.toFixed(2) %>
+                    </td>
+                    <td>
+                        <%= row.AvgBloodPressure %>
+                    </td>
+                </tr>
+                <% }); %>
+        </tbody>
+    </table>
+</body>
+
+</html>
